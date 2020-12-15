@@ -44,8 +44,6 @@ def main():
             for r in num_repetitions:
                 occurrences = []
                 occurrences_count = [0] * (n+1)
-                #print('Experiment: counting {} events with fixed probability 1/2'.format(n))
-                #print('Repeating the experiment {} times'.format(n))
 
                 for i in range(r):
                     result = count_events(n)
