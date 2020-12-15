@@ -38,7 +38,6 @@ def main():
     #num_repetitions = [10,100,1000]
     num_repetitions = [10]
     #print(sum(len(line.split()) for line in test_string))
-
     for word in test_dict:
         for n in range(test_dict[word]+1):
         #for n in [sum(len(line.split()) for line in test_string)-1]:
@@ -52,9 +51,8 @@ def main():
                     result = count_events(n)
                     occurrences.append(result)
                     occurrences_count[result] += 1
+                    
                     print(word,": ",result,"->",occurrences_count[result])
-                    if (result == 3):
-                        print("yay")
 
 main()
 
