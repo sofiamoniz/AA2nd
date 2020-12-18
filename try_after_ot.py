@@ -54,7 +54,7 @@ def main():
                 else:
                     result = count_events(max(num_events_dict[test_words[n]]))
                     occurrences.append(result)
-                    occurrences_count[result] += 1 
+                    occurrences_count[result] += 1
                     num_events_dict[test_words[n]] = occurrences
                 #dict_words_cout[test_words[n]] = occurrences
                 #print(test_words[n],": ",result,"->",occurrences_count[result])
