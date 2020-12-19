@@ -5,17 +5,17 @@ Autor: Ana Sofia Fernandes, 88739
 """
 
 import random
-from File_reader import File_reader
+from ReaderAndErrors.File_reader import File_reader
 
-##Class that acts as a probabilistic counter with probability 1/2
+##Class that acts as a probabilistic counter with log base 2
 
-class Counter_prob_1_2:
+class Counter_log_base_2:
 
     def __init__(self, file_to_read):
         self.word_counting_dict = {}
         self.file_reader = File_reader(file_to_read)
 
-    def increment_counter(self,prob=0.5):
+    def increment_counter(self,prob):
         """
         Return 1 with probability prob 
         Return 0 with probability (1-prob)
@@ -24,9 +24,9 @@ class Counter_prob_1_2:
             return 1
         return 0
 
-    def count_events(self,num_events=1, counter_prob=0.5):
+    def count_events(self,counter_prob,num_events=1):
         """
-        Counting the number of events, using a probability of 1/2
+        Counting the number of events, using logarithmic counter
         """
 
         counter_value = 0
@@ -39,16 +39,17 @@ class Counter_prob_1_2:
     def count_words(self):
         """
         Counts the occurence of each word in a given file and saves it in
-        a dictionary. The couting is made with a counter of fixed prob of 1/2.
+        a dictionary. The couting is made with a logarithmic counter
+        with base 2.
         """
         self.file_reader.read_file()
         words = self.file_reader.get_final_words()
         for word in words:
             if word not in self.word_counting_dict:
-                result = self.count_events()
+                result = self.count_events(1-(1/2**0)) #P[Xi = 0 ] = 1 – 1 / 2^(i-1)
                 self.word_counting_dict[word] = result
             else:
-                result = self.count_events()
+                result = self.count_events(1/(2**(self.word_counting_dict[word]-1))) #P[Xi] = 1 / 2^(i-1)
                 self.word_counting_dict[word] += result
     
     def get_final_counting(self):

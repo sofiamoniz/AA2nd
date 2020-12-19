@@ -4,7 +4,7 @@ Assignment 2: Algoritmos Probabilísticos
 Autor: Ana Sofia Fernandes, 88739
 """
 
-from File_reader import File_reader
+from ReaderAndErrors.File_reader import File_reader
 
 ##Class that acts as an exact counter and counts the occurences of each word in file
 
