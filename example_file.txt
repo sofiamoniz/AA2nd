@@ -1,4 +1,0 @@
-Comparing tight scores of models with the
-same tagger but different lead tokens, the ones with paragraph
-position as lead tokens outperform in both ROUGE-1 precision and
-recall
