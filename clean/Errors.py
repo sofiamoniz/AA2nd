@@ -20,6 +20,10 @@ class Errors:
         self.avg_rel_error = ""
 
     def calculate_errors(self):
+        """
+        Calculates the minimum, maximum and average relative errors for the
+        probabilistic counter that was passed
+        """
         rel_errors = []
         for word in self.exact_counter:
             error = abs(self.exact_counter[word]-self.prob_counter[word])
@@ -31,6 +35,9 @@ class Errors:
         self.avg_rel_error = str(round(sum(rel_errors)/len(rel_errors), 3))
 
     def get_errors(self):
+        """
+        Getter for the relative errors
+        """
         self.calculate_errors()
         print("\n    Relative errors \n"
                     +"\n--- Minimum relative error:  %s " % (self.min_rel_error) + "%"
