@@ -5,18 +5,19 @@ from ReaderAndErrors.Errors import Errors
 
 def main():
     #print("\nExact counter")
-    exact_counter = Exact_counter("TextFiles/example_file.txt")
+    exact_counter = Exact_counter("TextFiles/pt_hamlet.txt")
     exact_counter.count_words()
     exact_result = exact_counter.get_final_counting()
+    print(exact_result["quem"])
 
     ##não passar o número de repetições na função ; fazer isso depois nos testes
     #print("\nCounter with prob 1/2")
-    counter_prob_1_2 = Counter_prob_1_2("TextFiles/example_file.txt")
+    counter_prob_1_2 = Counter_prob_1_2("TextFiles/pt_hamlet.txt")
     counter_prob_1_2.count_words()
     prob_1_2_result = counter_prob_1_2.get_final_counting()
 
     #print("\nCounter with log base 2")
-    counter_log_base_2 = Counter_log_base_2("TextFiles/example_file.txt")
+    counter_log_base_2 = Counter_log_base_2("TextFiles/pt_hamlet.txt")
     counter_log_base_2.count_words()
     prob_log_result = counter_log_base_2.get_final_counting()
 
