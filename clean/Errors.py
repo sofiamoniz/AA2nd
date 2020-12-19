@@ -4,11 +4,8 @@ Assignment 2: Algoritmos Probabilísticos
 Autor: Ana Sofia Fernandes, 88739
 """
 
-
 ##Class that calculates the errors, for each probabilistic counter, by comparing the exact counter with each one
 ##Of the probabilistics
-
-##máximo erro relativo, mínimo erro relativo, média do erro relativo,
 
 class Errors:
 
