@@ -1,7 +1,6 @@
 """
 AA, January 2021
-Assignment 1: Estratégias de Desenvolvimento de Algoritmos 
-            - The Longest Common Subsequence Problem
+Assignment 2: Algoritmos Probabilísticos
 Autor: Ana Sofia Fernandes, 88739
 """
 
