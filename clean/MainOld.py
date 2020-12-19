@@ -8,7 +8,8 @@ def main():
     exact_counter = Exact_counter("TextFiles/pt_hamlet.txt")
     exact_counter.count_words()
     exact_result = exact_counter.get_final_counting()
-    print(exact_result["quem"])
+    #print(exact_result["quem"])
+    exact_counter.get_top_20_words()
 
     ##não passar o número de repetições na função ; fazer isso depois nos testes
     #print("\nCounter with prob 1/2")
