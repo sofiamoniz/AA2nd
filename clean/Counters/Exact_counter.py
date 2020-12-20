@@ -36,13 +36,23 @@ class Exact_counter:
         """
         return self.word_counting_dict
 
-    def get_top_20_words(self):
+    def write_final_counting(self, output_file):
         """
-        Getter for the top 20 words
+        Write in file the final counting for exact counter, in descending order
         """
-        #####WRITE THIS TO FILE
+        word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
+        with open(output_file,"w") as file:
+            for word in word_counting_ordered:
+                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))
+        
+
+    def write_top_20_words(self, output_file):
+        """
+        Write in file the top 20 words
+        """
         k = Counter(self.word_counting_dict) 
         high = k.most_common(20)
-        print("\n--- Top 20 words - exact counter:  " )
-        for i in high:
-            print(i[0]," -> ", i[1])
+        with open(output_file,"w") as output:
+            output.write("--- Top 20 words - exact counter:  " )
+            for i in high:
+                output.write("\n"+str(i[0])+" -> "+str(i[1]))

@@ -40,6 +40,17 @@ class Errors:
                     +"\n--- Minimum relative error:  %s " % (self.min_rel_error) + "%"
                     +"\n--- Maximum relative error:  %s " % (self.max_rel_error) + "%"   
                     +"\n--- Avg relative error:  %s " % (self.avg_rel_error) + "%") 
+
+    def write_errors(self, output_file):
+        """
+        Write relative errors in file
+        """
+        self.calculate_errors()
+        with open(output_file, "w") as file:
+            file.write("\n    Relative errors \n"
+                        +"\n--- Minimum relative error:  %s " % (self.min_rel_error) + "%"
+                        +"\n--- Maximum relative error:  %s " % (self.max_rel_error) + "%"   
+                        +"\n--- Avg relative error:  %s " % (self.avg_rel_error) + "%") 
         
 
     

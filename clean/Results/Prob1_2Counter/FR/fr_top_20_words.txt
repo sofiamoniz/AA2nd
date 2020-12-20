@@ -1,0 +1,21 @@
+--- Top 20 words - exact counter:  
+vous -> 223
+pour -> 167
+dans -> 167
+nous -> 117
+plus -> 107
+comme -> 103
+avec -> 100
+mais -> 100
+votre -> 99
+tout -> 75
+cette -> 72
+cela -> 58
+même -> 55
+fait -> 54
+bien -> 53
+sont -> 48
+notre -> 48
+elle -> 44
+sans -> 44
+quelque -> 42

@@ -6,6 +6,7 @@ Autor: Ana Sofia Fernandes, 88739
 
 import random
 from ReaderAndErrors.File_reader import File_reader
+from collections import Counter 
 
 ##Class that acts as a probabilistic counter with probability 1/2
 
@@ -56,3 +57,23 @@ class Counter_prob_1_2:
         Getter for the dictionary with the final counting
         """
         return self.word_counting_dict
+
+    def write_final_counting(self, output_file):
+        """
+        Write in file the final counting for exact counter, in descending order
+        """
+        word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
+        with open(output_file,"w") as file:
+            for word in word_counting_ordered:
+                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))
+
+    def write_top_20_words(self, output_file):
+        """
+        Write in file the top 20 words
+        """
+        k = Counter(self.word_counting_dict) 
+        high = k.most_common(20)
+        with open(output_file,"a") as output:
+            output.write("--- Top 20 words - exact counter:  " )
+            for i in high:
+                output.write("\n"+str(i[0])+" -> "+str(i[1]))

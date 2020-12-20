@@ -1,0 +1,21 @@
+--- Top 20 words - exact counter:  
+that -> 160
+your -> 133
+with -> 125
+this -> 122
+what -> 102
+have -> 85
+will -> 73
+shall -> 53
+most -> 50
+they -> 50
+good -> 49
+thou -> 46
+like -> 41
+more -> 40
+from -> 39
+hath -> 37
+when -> 36
+which -> 36
+enter -> 33
+give -> 32

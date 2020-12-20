@@ -1,0 +1,21 @@
+--- Top 20 words - exact counter:  
+seja -> 10
+hamlet -> 9
+minha -> 8
+para -> 8
+mais -> 8
+como -> 8
+tudo -> 8
+será -> 8
+ophelia -> 8
+horacio -> 7
+está -> 7
+esta -> 7
+nada -> 7
+quando -> 7
+todos -> 7
+este -> 7
+seus -> 7
+suas -> 7
+laerte -> 7
+ella -> 7

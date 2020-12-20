@@ -8,8 +8,9 @@ def main():
     exact_counter = Exact_counter("TextFiles/pt_hamlet.txt")
     exact_counter.count_words()
     exact_result = exact_counter.get_final_counting()
+    exact_counter.write_final_counting()
     #print(exact_result["quem"])
-    exact_counter.get_top_20_words()
+    exact_counter.write_top_20_words("Results/top20_pt.txt")
 
     ##não passar o número de repetições na função ; fazer isso depois nos testes
     #print("\nCounter with prob 1/2")
@@ -22,9 +23,10 @@ def main():
     counter_log_base_2.count_words()
     prob_log_result = counter_log_base_2.get_final_counting()
 
-    print("Prob 1_2")
+    print("\nProb 1_2")
     errors = Errors(exact_result, prob_1_2_result)
     errors.get_errors()
+    ##chamar most common words aqui
 
     print("\nLog base 2")
     errors = Errors(exact_result, prob_log_result)

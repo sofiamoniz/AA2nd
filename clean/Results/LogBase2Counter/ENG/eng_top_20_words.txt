@@ -1,0 +1,21 @@
+--- Top 20 words - exact counter:  
+these -> 10
+your -> 9
+from -> 9
+this -> 8
+have -> 8
+good -> 8
+give -> 8
+will -> 8
+with -> 8
+what -> 8
+like -> 8
+would -> 8
+very -> 8
+shall -> 8
+must -> 8
+most -> 7
+upon -> 7
+make -> 7
+that -> 7
+where -> 7

@@ -1,0 +1,21 @@
+--- Top 20 words - exact counter:  
+hamlet -> 406
+para -> 236
+mais -> 175
+como -> 164
+minha -> 139
+horacio -> 121
+rainha -> 101
+polonio -> 100
+está -> 79
+laerte -> 73
+porque -> 68
+rosencrantz -> 66
+quem -> 63
+esta -> 62
+ophelia -> 62
+seus -> 60
+quando -> 58
+este -> 57
+suas -> 56
+primeiro -> 52
