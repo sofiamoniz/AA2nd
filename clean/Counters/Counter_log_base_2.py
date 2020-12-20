@@ -64,6 +64,7 @@ class Counter_log_base_2:
         word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
         with open(output_file,"w") as file:
             file.write("Execution time for counter with log base 2: "+str(round(self.execution_time,3))+" seconds.\n")
+            file.write("\nNumber of words counted: "+ str(len(word_counting_ordered.keys()))+"\n")
             file.write("\nFinal word counting:\n")
             for word in word_counting_ordered:
                 file.write("\n"+word+" -> "+str(word_counting_ordered[word]))

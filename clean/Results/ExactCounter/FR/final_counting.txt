@@ -1,5 +1,7 @@
 Execution time for exact counter: 0.003 seconds.
 
+Number of words counted: 4839
+
 Final word counting:
 
 vous -> 441
