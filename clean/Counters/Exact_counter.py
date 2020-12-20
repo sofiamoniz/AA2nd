@@ -6,7 +6,7 @@ Autor: Ana Sofia Fernandes, 88739
 
 from ReaderAndErrors.File_reader import File_reader
 from collections import Counter 
-
+import time
 
 ##Class that acts as an exact counter and counts the occurences of each word in file
 
@@ -15,6 +15,7 @@ class Exact_counter:
     def __init__(self, file_to_read):
         self.word_counting_dict = {}
         self.file_reader = File_reader(file_to_read)
+        self.execution_time = 0
 
     def count_words(self):
         """
@@ -23,18 +24,13 @@ class Exact_counter:
         """
         self.file_reader.read_file()
         words = self.file_reader.get_final_words()
-
+        start_time = time.time()
         for w in words:
             if w not in self.word_counting_dict:
                 self.word_counting_dict[w] = 1
             else:
                 self.word_counting_dict[w] += 1
-        
-    def get_final_counting(self):
-        """
-        Getter for the dictionary with the final counting
-        """
-        return self.word_counting_dict
+        self.execution_time = time.time() - start_time
 
     def write_final_counting(self, output_file):
         """
@@ -42,9 +38,10 @@ class Exact_counter:
         """
         word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
         with open(output_file,"w") as file:
+            file.write("Execution time for exact counter: "+str(round(self.execution_time,3))+" seconds.\n")
+            file.write("\nFinal word counting:\n")
             for word in word_counting_ordered:
-                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))
-        
+                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))        
 
     def write_top_20_words(self, output_file):
         """
@@ -56,3 +53,9 @@ class Exact_counter:
             output.write("--- Top 20 words - exact counter:  " )
             for i in high:
                 output.write("\n"+str(i[0])+" -> "+str(i[1]))
+
+    def get_final_counting(self):
+        """
+        Getter for the dictionary with the final counting
+        """
+        return self.word_counting_dict
