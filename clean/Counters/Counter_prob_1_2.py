@@ -74,7 +74,7 @@ class Counter_prob_1_2:
         """
         k = Counter(self.word_counting_dict) 
         high = k.most_common(20)
-        with open(output_file,"a") as output:
+        with open(output_file,"w") as output:
             output.write("--- Top 20 words - counter with probability 1/2:  " )
             for i in high:
                 output.write("\n"+str(i[0])+" -> "+str(i[1]))
