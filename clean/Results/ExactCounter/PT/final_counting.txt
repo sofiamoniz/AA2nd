@@ -1,4 +1,4 @@
-Execution time for exact counter: 0.002 seconds.
+Execution time for exact counter: 0.003 seconds.
 
 Number of words counted: 4222
 

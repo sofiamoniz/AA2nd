@@ -1,0 +1,21 @@
+--- Top 20 words - counter with probability 1/2:  
+hamlet -> 196
+para -> 109
+mais -> 81
+como -> 78
+minha -> 68
+horacio -> 60
+polonio -> 57
+laerte -> 43
+rainha -> 43
+está -> 41
+rosencrantz -> 38
+quem -> 34
+porque -> 34
+suas -> 31
+ophelia -> 31
+esta -> 28
+quando -> 28
+seus -> 28
+vossa -> 28
+primeiro -> 27

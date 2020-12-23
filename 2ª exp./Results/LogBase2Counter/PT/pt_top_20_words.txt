@@ -1,0 +1,21 @@
+--- Top 20 words - counter with log base 2:  
+minha -> 9
+para -> 9
+hamlet -> 9
+ophelia -> 9
+primeiro -> 8
+nada -> 8
+mais -> 8
+laerte -> 8
+rainha -> 8
+sobre -> 8
+polonio -> 8
+então -> 7
+horacio -> 7
+marcello -> 7
+está -> 7
+mesmo -> 7
+esta -> 7
+como -> 7
+este -> 7
+esse -> 7

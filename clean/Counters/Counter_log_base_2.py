@@ -56,25 +56,24 @@ class Counter_log_base_2:
                 result = self.count_events(1/(2**(self.word_counting_dict[word]-1))) #P[Xi] = 1 / 2^(i-1)
                 self.word_counting_dict[word] += result
         self.execution_time = time.time() - start_time
+        self.word_counting_dict = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
 
     def write_final_counting(self,output_file):
         """
         Write in file the final counting for counter with log base 2, in descending order
         """
-        word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
         with open(output_file,"w") as file:
             file.write("Execution time for counter with log base 2: "+str(round(self.execution_time,3))+" seconds.\n")
-            file.write("\nNumber of words counted: "+ str(len(word_counting_ordered.keys()))+"\n")
+            file.write("\nNumber of words counted: "+ str(len(self.word_counting_dict.keys()))+"\n")
             file.write("\nFinal word counting:\n")
-            for word in word_counting_ordered:
-                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))
+            for word in self.word_counting_dict:
+                file.write("\n"+word+" -> "+str(self.word_counting_dict[word]))
 
     def write_top_20_words(self, output_file):
         """
         Write in file the top 20 words
         """
-        k = Counter(self.word_counting_dict) 
-        high = k.most_common(20)
+        high = self.get_top_20_words()
         with open(output_file,"w") as output:
             output.write("--- Top 20 words - counter with log base 2:  " )
             for i in high:
@@ -85,3 +84,10 @@ class Counter_log_base_2:
         Getter for the dictionary with the final counting
         """
         return self.word_counting_dict
+
+    def get_top_20_words(self):
+        """
+        Getter for the most 20 counted words
+        """
+        k = Counter(self.word_counting_dict) 
+        return k.most_common(20)

@@ -1,0 +1,21 @@
+--- Top 20 words - counter with probability 1/2:  
+vous -> 227
+dans -> 197
+pour -> 155
+nous -> 129
+plus -> 110
+votre -> 108
+comme -> 107
+cette -> 88
+mais -> 82
+tout -> 77
+avec -> 74
+fait -> 58
+bien -> 51
+notre -> 50
+cela -> 45
+sont -> 44
+quelque -> 43
+même -> 42
+elle -> 40
+faire -> 39

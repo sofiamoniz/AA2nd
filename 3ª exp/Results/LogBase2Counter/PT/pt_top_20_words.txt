@@ -1,0 +1,21 @@
+--- Top 20 words - counter with log base 2:  
+então -> 9
+mais -> 9
+horacio -> 8
+minha -> 8
+para -> 8
+como -> 8
+porque -> 8
+hamlet -> 8
+quanto -> 8
+rainha -> 8
+polonio -> 8
+elle -> 7
+está -> 7
+esta -> 7
+nada -> 7
+alguma -> 7
+pelo -> 7
+quando -> 7
+seus -> 7
+pela -> 7

@@ -1,6 +1,0 @@
-
-    Relative errors 
-
---- Minimum relative error:  0.0 %
---- Maximum relative error:  100.0 %
---- Avg relative error:  49.473 %

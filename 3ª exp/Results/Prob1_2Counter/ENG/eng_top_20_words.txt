@@ -1,0 +1,21 @@
+--- Top 20 words - counter with probability 1/2:  
+that -> 175
+with -> 140
+this -> 136
+your -> 119
+have -> 91
+what -> 84
+will -> 78
+shall -> 52
+good -> 51
+thou -> 46
+they -> 46
+like -> 41
+most -> 40
+must -> 37
+enter -> 36
+would -> 35
+more -> 34
+very -> 34
+such -> 33
+make -> 30

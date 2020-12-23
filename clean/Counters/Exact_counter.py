@@ -7,6 +7,7 @@ Autor: Ana Sofia Fernandes, 88739
 from ReaderAndErrors.File_reader import File_reader
 from collections import Counter 
 import time
+from tabulate import tabulate
 
 ##Class that acts as an exact counter and counts the occurences of each word in file
 
@@ -31,25 +32,24 @@ class Exact_counter:
             else:
                 self.word_counting_dict[w] += 1
         self.execution_time = time.time() - start_time
+        self.word_counting_dict = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
 
     def write_final_counting(self, output_file):
         """
         Write in file the final counting for exact counter, in descending order
         """
-        word_counting_ordered = {k: v for k, v in sorted(self.word_counting_dict.items(), key=lambda item: item[1], reverse=True)}
         with open(output_file,"w") as file:
             file.write("Execution time for exact counter: "+str(round(self.execution_time,3))+" seconds.\n")
-            file.write("\nNumber of words counted: "+ str(len(word_counting_ordered.keys()))+"\n")
+            file.write("\nNumber of words counted: "+ str(len(self.word_counting_dict.keys()))+"\n")
             file.write("\nFinal word counting:\n")
-            for word in word_counting_ordered:
-                file.write("\n"+word+" -> "+str(word_counting_ordered[word]))        
+            for word in self.word_counting_dict:
+                file.write("\n"+word+" -> "+str(self.word_counting_dict[word]))        
 
     def write_top_20_words(self, output_file):
         """
         Write in file the top 20 words
         """
-        k = Counter(self.word_counting_dict) 
-        high = k.most_common(20)
+        high = self.get_top_20_words()
         with open(output_file,"w") as output:
             output.write("--- Top 20 words - exact counter:  " )
             for i in high:
@@ -60,3 +60,39 @@ class Exact_counter:
         Getter for the dictionary with the final counting
         """
         return self.word_counting_dict
+
+    def get_top_20_words(self):
+        """
+        Getter for the most 20 counted words
+        """
+        k = Counter(self.word_counting_dict) 
+        return k.most_common(20)
+
+    def write_table(self, prob_1_2_counter_result, prob_log_counter_result, output_file):
+        top_20_exact = self.get_top_20_words()
+        rows = []
+        headers=['Word','Exact counting','Prob 1/2 counting','Pos. in prob 1/2 counter','Counting diff', 'Top 20 of prob 1/2 counter?']
+        with open(output_file,"w") as output:
+            output.write("Comparasion between exact counter and counter with probability 1/2\n\n")
+            for i in top_20_exact:
+                if i[0] in prob_1_2_counter_result:
+                    if (list(prob_1_2_counter_result.keys()).index(str(i[0])) <=19): #19 bc index starts at 0
+                        rows.append([str(i[0]),str(i[1]),prob_1_2_counter_result[i[0]],list(prob_1_2_counter_result.keys()).index(str(i[0])), abs(i[1]-prob_1_2_counter_result[i[0]]), 'True'])
+                    else:
+                        rows.append([str(i[0]),str(i[1]),prob_1_2_counter_result[i[0]],list(prob_1_2_counter_result.keys()).index(str(i[0])), abs(i[1]-prob_1_2_counter_result[i[0]]), 'False'])
+                else:
+                    rows.append([str(i[0]),str(i[1]),'False','---', '---'])
+            output.write(tabulate(rows,headers=headers))
+            output.write("\n\nComparasion between exact counter and counter with log base 2\n\n")
+            rows = []
+            headers=['Word','Exact counting','Prob log 2 counting','Pos. in prob log 2 counting','Counting diff', 'Top 20 of prob log 2?']
+            for i in top_20_exact:
+                if i[0] in prob_log_counter_result:
+                    if (list(prob_log_counter_result.keys()).index(str(i[0])) <=20):
+                        rows.append([str(i[0]),str(i[1]),prob_log_counter_result[i[0]],list(prob_log_counter_result.keys()).index(str(i[0])), abs(i[1]-prob_log_counter_result[i[0]]), 'True'])
+                    else:
+                        rows.append([str(i[0]),str(i[1]),prob_log_counter_result[i[0]],list(prob_log_counter_result.keys()).index(str(i[0])), abs(i[1]-prob_log_counter_result[i[0]]), 'False'])
+                else:
+                    rows.append([str(i[0]),str(i[1]),'False','---', '---'])
+            output.write(tabulate(rows,headers=headers))
+

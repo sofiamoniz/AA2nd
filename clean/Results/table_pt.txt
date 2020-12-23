@@ -1,0 +1,49 @@
+Comparasion between exact counter and counter with probability 1/2
+
+Word           Exact counting    Prob 1/2 counting    Pos. in prob 1/2 counter    Counting diff  Top 20 of prob 1/2 counter?
+-----------  ----------------  -------------------  --------------------------  ---------------  -----------------------------
+hamlet                    406                  190                           0              216  True
+para                      236                  122                           1              114  True
+mais                      175                   97                           2               78  True
+como                      164                   66                           4               98  True
+minha                     139                   66                           3               73  True
+horacio                   121                   65                           5               56  True
+rainha                    101                   46                           7               55  True
+polonio                   100                   53                           6               47  True
+está                       79                   33                          14               46  True
+laerte                     73                   32                          16               41  True
+porque                     68                   37                           8               31  True
+rosencrantz                66                   35                          11               31  True
+quem                       63                   29                          17               34  True
+esta                       62                   33                          15               29  True
+ophelia                    62                   26                          21               36  False
+seus                       60                   36                          10               24  True
+quando                     58                   34                          12               24  True
+este                       57                   36                           9               21  True
+suas                       56                   34                          13               22  True
+primeiro                   52                   27                          19               25  True
+
+Comparasion between exact counter and counter with log base 2
+
+Word           Exact counting    Prob log 2 counting    Pos. in prob log 2 counting    Counting diff  Top 20 of prob log 2?
+-----------  ----------------  ---------------------  -----------------------------  ---------------  -----------------------
+hamlet                    406                      8                              9              398  True
+para                      236                      9                              0              227  True
+mais                      175                      7                             17              168  True
+como                      164                      7                             19              157  True
+minha                     139                      8                              5              131  True
+horacio                   121                      8                              2              113  True
+rainha                    101                      7                             25               94  False
+polonio                   100                      8                             11               92  True
+está                       79                      8                              3               71  True
+laerte                     73                      8                             10               65  True
+porque                     68                      8                              7               60  True
+rosencrantz                66                      6                             53               60  False
+quem                       63                      7                             13               56  True
+esta                       62                      8                              4               54  True
+ophelia                    62                      7                             30               55  False
+seus                       60                      7                             22               53  False
+quando                     58                      6                             41               52  False
+este                       57                      8                              8               49  True
+suas                       56                      7                             24               49  False
+primeiro                   52                      7                             12               45  True

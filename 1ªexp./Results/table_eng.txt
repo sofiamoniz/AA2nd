@@ -1,0 +1,49 @@
+Comparasion between exact counter and counter with probability 1/2
+
+Word      Exact counting    Prob 1/2 counting    Position in prob 1/2 counter    Counting difference  Present in top 20 of prob 1/2 counter?
+------  ----------------  -------------------  ------------------------------  ---------------------  ----------------------------------------
+that                 351                  181                               0                    170  True
+with                 275                  134                               1                    141  True
+this                 254                  128                               3                    126  True
+your                 250                  128                               2                    122  True
+what                 190                   88                               5                    102  True
+have                 176                   94                               4                     82  True
+will                 151                   72                               6                     79  True
+shall                109                   58                               7                     51  True
+they                  98                   45                              10                     53  True
+good                  97                   48                               9                     49  True
+thou                  97                   56                               8                     41  True
+from                  94                   43                              11                     51  True
+most                  82                   38                              13                     44  True
+would                 75                   30                              20                     45  False
+more                  75                   34                              18                     41  True
+like                  74                   42                              12                     32  True
+enter                 69                   36                              14                     33  True
+very                  64                   33                              19                     31  True
+hath                  63                   35                              16                     28  True
+such                  61                   29                              23                     32  False
+
+Comparasion between exact counter and counter with log base 2
+
+Word      Exact counting  Prob log 2 counting      Position in prob log 2 counter    Counting difference  Present in top 20 of prob log 2 counter?
+------  ----------------  ---------------------  --------------------------------  ---------------------  ------------------------------------------
+that                 351  True                                                  2                    342  True
+with                 275  True                                                  0                    265  True
+this                 254  True                                                  1                    245  True
+your                 250  True                                                  5                    242  True
+what                 190  True                                                 10                    182  True
+have                 176  True                                                  6                    168  True
+will                 151  True                                                  9                    143  True
+shall                109  True                                                 24                    102  False
+they                  98  True                                                 12                     90  True
+good                  97  True                                                 14                     90  True
+thou                  97  True                                                 41                     91  False
+from                  94  True                                                 37                     88  False
+most                  82  True                                                 30                     76  False
+would                 75  True                                                  3                     66  True
+more                  75  True                                                 20                     68  True
+like                  74  True                                                 11                     66  True
+enter                 69  True                                                 29                     63  False
+very                  64  True                                                 45                     58  False
+hath                  63  True                                                 34                     57  False
+such                  61  True                                                 44                     55  False

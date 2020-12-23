@@ -1,0 +1,49 @@
+Comparasion between exact counter and counter with probability 1/2
+
+Word      Exact counting    Prob 1/2 counting    Position in prob 1/2 counter    Counting difference  Present in top 20 of prob 1/2 counter?
+------  ----------------  -------------------  ------------------------------  ---------------------  ----------------------------------------
+vous                 441                  193                               0                    248  True
+dans                 354                  182                               1                    172  True
+pour                 327                  146                               2                    181  True
+nous                 249                  140                               3                    109  True
+plus                 220                  114                               4                    106  True
+comme                204                  100                               6                    104  True
+votre                197                  106                               5                     91  True
+mais                 187                   93                               7                     94  True
+avec                 167                   80                               8                     87  True
+cette                159                   79                               9                     80  True
+tout                 141                   61                              10                     80  True
+fait                 116                   58                              11                     58  True
+bien                 113                   57                              12                     56  True
+sont                 102                   54                              13                     48  True
+cela                  97                   53                              14                     44  True
+même                  94                   45                              15                     49  True
+sans                  87                   38                              22                     49  False
+notre                 85                   40                              20                     45  False
+elle                  82                   42                              18                     40  True
+aussi                 80                   37                              24                     43  False
+
+Comparasion between exact counter and counter with log base 2
+
+Word      Exact counting  Prob log 2 counting      Position in prob log 2 counter    Counting difference  Present in top 20 of prob log 2 counter?
+------  ----------------  ---------------------  --------------------------------  ---------------------  ------------------------------------------
+vous                 441  True                                                  3                    432  True
+dans                 354  True                                                  0                    343  True
+pour                 327  True                                                 12                    319  True
+nous                 249  True                                                 10                    241  True
+plus                 220  True                                                  1                    210  True
+comme                204  True                                                  6                    195  True
+votre                197  True                                                  8                    189  True
+mais                 187  True                                                  2                    177  True
+avec                 167  True                                                 20                    160  True
+cette                159  True                                                 42                    153  False
+tout                 141  True                                                  5                    132  True
+fait                 116  True                                                 26                    109  False
+bien                 113  True                                                 22                    106  False
+sont                 102  True                                                 21                     95  False
+cela                  97  True                                                 14                     89  True
+même                  94  True                                                 24                     87  False
+sans                  87  True                                                 13                     79  True
+notre                 85  True                                                 11                     77  True
+elle                  82  True                                                  4                     73  True
+aussi                 80  True                                                 17                     72  True

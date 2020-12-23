@@ -49,13 +49,20 @@ def main(file_to_read):
     errors.write_errors("Results/LogBase2Counter/ENG/relative_errors.txt")
 
     ###################
+    # Write table with comparisons #
+    ###################
+    exact_counter.write_table(prob_1_2_counter_result,prob_log_counter_result, "Results/table_eng.txt")
+
+    ###################
     # Print information to the user #
     ###################
     print("\n    English example \n"
                 +"\n--- Exact counter results can be found on folder Results/ExactCounter/ENG "
                 +"\n--- Probabilistic counter with probability 1/2 results can be found on folder Results/Prob1_2Counter/ENG"   
-                +"\n--- Probabilistic counter with log base 2 results can be found on folder Results/LogBase2Counter/ENG")
+                +"\n--- Probabilistic counter with log base 2 results can be found on folder Results/LogBase2Counter/ENG"
+                +"\n--- Comparison table for counters can be found in Results/table_eng.txt")
 
+    
 
 if __name__ == '__main__':
     main("TextFiles/eng_hamlet.txt")
