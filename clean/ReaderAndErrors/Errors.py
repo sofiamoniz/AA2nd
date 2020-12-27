@@ -31,26 +31,34 @@ class Errors:
         self.max_rel_error = str(rel_errors[len(rel_errors)-1])
         self.avg_rel_error = str(round(sum(rel_errors)/len(rel_errors), 3))
 
+    def get_min_rel_error(self):
+        """
+        Getter for the min rel error
+        """
+        return self.min_rel_error
+
+    def get_max_rel_error(self):
+        """
+        Getter for the max rel error
+        """
+        return self.max_rel_error
+
+    def get_mean_rel_error(self):
+        """
+        Getter for the mean rel error
+        """
+        return self.avg_rel_error
+    
+
     def get_errors(self):
         """
         Getter for the relative errors
         """
-        self.calculate_errors()
         print("\n    Relative errors \n"
                     +"\n--- Minimum relative error:  %s " % (self.min_rel_error) + "%"
                     +"\n--- Maximum relative error:  %s " % (self.max_rel_error) + "%"   
                     +"\n--- Avg relative error:  %s " % (self.avg_rel_error) + "%") 
 
-    def write_errors(self, output_file):
-        """
-        Write relative errors in file
-        """
-        self.calculate_errors()
-        with open(output_file, "w") as file:
-            file.write("\n    Relative errors \n"
-                        +"\n--- Minimum relative error:  %s " % (self.min_rel_error) + "%"
-                        +"\n--- Maximum relative error:  %s " % (self.max_rel_error) + "%"   
-                        +"\n--- Avg relative error:  %s " % (self.avg_rel_error) + "%") 
         
 
     

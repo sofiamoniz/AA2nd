@@ -1,12 +1,26 @@
   Repetition  Max value    Min value         Mean value    Exec.time
 ------------  -----------  --------------  ------------  -----------
-           1  that : 175   paces : 0            1.84025        0.007
-           2  that : 169   paces : 0            1.83019        0.007
-           3  that : 187   platform : 0         1.85597        0.007
-           4  that : 164   paces : 0            1.81604        0.007
-           5  that : 176   carefully : 0        1.84811        0.007
-           6  that : 186   paces : 0            1.8283         0.011
-           7  that : 162   carefully : 0        1.84811        0.008
-           8  that : 180   platform : 0         1.81635        0.007
-           9  that : 162   paces : 0            1.83616        0.007
-          10  that : 190   approaches : 0       1.86855        0.007
+           1  that : 180   paces : 0            1.82013        0.008
+           2  that : 188   paces : 0            1.84906        0.007
+           3  that : 179   paces : 0            1.85629        0.007
+           4  that : 171   paces : 0            1.82642        0.007
+           5  that : 174   platform : 0         1.85252        0.007
+           6  that : 190   approaches : 0       1.86321        0.007
+           7  that : 169   paces : 0            1.83333        0.007
+           8  that : 173   unfold : 0           1.83711        0.008
+           9  that : 163   platform : 0         1.85283        0.007
+          10  that : 181   paces : 0            1.84591        0.008
+
+
+  Repetition    Max rel error    Min rel error    Mean rel error
+------------  ---------------  ---------------  ----------------
+           1              100                0            50.682
+           2              100                0            51.031
+           3              100                0            49.638
+           4              100                0            51.854
+           5              100                0            50.225
+           6              100                0            49.621
+           7              100                0            50.513
+           8              100                0            50.037
+           9              100                0            50.372
+          10              100                0            50.919

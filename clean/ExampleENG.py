@@ -39,15 +39,7 @@ def main(file_to_read):
     counter_log_base_2.write_final_counting("Results/LogBase2Counter/ENG/final_counting.txt")
     counter_log_base_2.write_top_20_words("Results/LogBase2Counter/ENG/eng_top_20_words.txt")
 
-    ###################
-    # Get errors for each counter #
-    ###################
-    errors = Errors(exact_counter_result, prob_1_2_counter_result)
-    errors.write_errors("Results/Prob1_2Counter/ENG/relative_errors.txt")
-
-    errors = Errors(exact_counter_result, prob_log_counter_result)
-    errors.write_errors("Results/LogBase2Counter/ENG/relative_errors.txt")
-
+   
     ###################
     # Write table with comparisons #
     ###################

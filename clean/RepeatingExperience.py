@@ -45,27 +45,49 @@ def repeat_prob_1_2(file_to_read, num_repetitions):
     count = 0
     headers = ["Repetition", "Max value", "Min value","Mean value", "Exec.time"]
     rows = []
+    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error"]
+    rows2=[]
     for i in range(num_repetitions):
         counter_prob_1_2 = Counter_prob_1_2(file_to_read)
         counter_prob_1_2.count_words()
+        prob_1_2_counter_result = counter_prob_1_2.get_final_counting()
+        exact_counter = Exact_counter(file_to_read)
+        exact_counter.count_words()
+        exact_counter_result = exact_counter.get_final_counting()
+        errors = Errors(exact_counter_result, prob_1_2_counter_result)
+        errors.calculate_errors()
         count+=1       
         rows.append([count,counter_prob_1_2.get_max(),counter_prob_1_2.get_min(),counter_prob_1_2.get_mean(), counter_prob_1_2.get_execution_time()])
-    
+        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error()])
     with open("Results/Prob1_2Counter/ENG/10_experiences.txt","w") as output:
         output.write(tabulate(rows,headers=headers))
+        output.write("\n\n\n")
+        output.write(tabulate(rows2,headers=headers2)) 
 
+    
 def repeat_log_2(file_to_read, num_repetitions):
     count = 0
     headers = ["Repetition", "Max value", "Min value","Mean value", "Exec.time"]
     rows = []
+    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error"]
+    rows2=[]
     for i in range(num_repetitions):
         counter_log_base_2 = Counter_log_base_2(file_to_read)
         counter_log_base_2.count_words()
-        count+=1       
+        counter_log_base_2_result = counter_log_base_2.get_final_counting()
+        exact_counter = Exact_counter(file_to_read)
+        exact_counter.count_words()
+        exact_counter_result = exact_counter.get_final_counting()
+        errors = Errors(exact_counter_result, counter_log_base_2_result)
+        errors.calculate_errors()
+        count+=1
         rows.append([count,counter_log_base_2.get_max(),counter_log_base_2.get_min(),counter_log_base_2.get_mean(), counter_log_base_2.get_execution_time()])
+        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error()])
     
     with open("Results/LogBase2Counter/ENG/10_experiences.txt","w") as output:
         output.write(tabulate(rows,headers=headers))
+        output.write("\n\n\n")
+        output.write(tabulate(rows2,headers=headers2))
 
 
 if __name__ == '__main__':
