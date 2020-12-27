@@ -39,7 +39,6 @@ class Exact_counter:
         Write in file the final counting for exact counter, in descending order
         """
         with open(output_file,"w") as file:
-            file.write("Execution time for exact counter: "+str(round(self.execution_time,3))+" seconds.\n")
             file.write("\nNumber of words counted: "+ str(len(self.word_counting_dict.keys()))+"\n")
             file.write("\nFinal word counting:\n")
             for word in self.word_counting_dict:
@@ -69,6 +68,9 @@ class Exact_counter:
         return k.most_common(20)
 
     def write_table(self, prob_1_2_counter_result, prob_log_counter_result, output_file):
+        """
+        Write to file a comparasion table between the counters
+        """
         top_20_exact = self.get_top_20_words()
         rows = []
         headers=['Word','Exact counting','Prob 1/2 counting','Pos. in prob 1/2 counter','Counting diff', 'Top 20 of prob 1/2 counter?']
@@ -95,4 +97,35 @@ class Exact_counter:
                 else:
                     rows.append([str(i[0]),str(i[1]),'False','---', '---'])
             output.write(tabulate(rows,headers=headers))
+
+    def get_max(self):
+        """
+        Getter for max counting
+        """
+        max_word = str(max(self.word_counting_dict, key=self.word_counting_dict.get))
+        max_word_couting = str(self.word_counting_dict[max_word])
+        return max_word+" : "+max_word_couting
+
+    def get_min(self):
+        """
+        Getter for min counting
+        """
+        min_word = str(min(self.word_counting_dict, key=self.word_counting_dict.get))
+        min_word_couting = str(self.word_counting_dict[min_word])
+        return min_word+" : "+min_word_couting
+
+    def get_mean(self):
+        """
+        Getter for mean counting
+        """
+        total_counting = 0
+        for word in self.word_counting_dict:
+            total_counting += self.word_counting_dict[word]
+        return round(total_counting/len(self.word_counting_dict), 5)
+
+    def get_execution_time(self):
+        """
+        Getter for execution time
+        """
+        return round(self.execution_time,3)
 

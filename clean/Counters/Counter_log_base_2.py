@@ -63,7 +63,6 @@ class Counter_log_base_2:
         Write in file the final counting for counter with log base 2, in descending order
         """
         with open(output_file,"w") as file:
-            file.write("Execution time for counter with log base 2: "+str(round(self.execution_time,3))+" seconds.\n")
             file.write("\nNumber of words counted: "+ str(len(self.word_counting_dict.keys()))+"\n")
             file.write("\nFinal word counting:\n")
             for word in self.word_counting_dict:
@@ -91,3 +90,34 @@ class Counter_log_base_2:
         """
         k = Counter(self.word_counting_dict) 
         return k.most_common(20)
+
+    def get_max(self):
+        """
+        Getter for max counting
+        """
+        max_word = str(max(self.word_counting_dict, key=self.word_counting_dict.get))
+        max_word_couting = str(self.word_counting_dict[max_word])
+        return max_word+" : "+max_word_couting
+
+    def get_min(self):
+        """
+        Getter for min counting
+        """
+        min_word = str(min(self.word_counting_dict, key=self.word_counting_dict.get))
+        min_word_couting = str(self.word_counting_dict[min_word])
+        return min_word+" : "+min_word_couting
+
+    def get_mean(self):
+        """
+        Getter for mean counting
+        """
+        total_counting = 0
+        for word in self.word_counting_dict:
+            total_counting += self.word_counting_dict[word]
+        return round(total_counting/len(self.word_counting_dict), 5)
+
+    def get_execution_time(self):
+        """
+        Getter for execution time
+        """
+        return round(self.execution_time,3)

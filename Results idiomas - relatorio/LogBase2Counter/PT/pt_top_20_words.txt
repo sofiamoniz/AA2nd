@@ -1,0 +1,21 @@
+--- Top 20 words - counter with log base 2:  
+para -> 9
+elle -> 8
+horacio -> 8
+está -> 8
+esta -> 8
+minha -> 8
+todos -> 8
+porque -> 8
+este -> 8
+hamlet -> 8
+laerte -> 8
+polonio -> 8
+primeiro -> 7
+quem -> 7
+marcello -> 7
+qual -> 7
+alguma -> 7
+mais -> 7
+pelo -> 7
+como -> 7

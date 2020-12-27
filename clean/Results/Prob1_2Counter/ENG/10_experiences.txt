@@ -1,0 +1,12 @@
+  Repetition  Max value    Min value         Mean value    Exec.time
+------------  -----------  --------------  ------------  -----------
+           1  that : 175   paces : 0            1.84025        0.007
+           2  that : 169   paces : 0            1.83019        0.007
+           3  that : 187   platform : 0         1.85597        0.007
+           4  that : 164   paces : 0            1.81604        0.007
+           5  that : 176   carefully : 0        1.84811        0.007
+           6  that : 186   paces : 0            1.8283         0.011
+           7  that : 162   carefully : 0        1.84811        0.008
+           8  that : 180   platform : 0         1.81635        0.007
+           9  that : 162   paces : 0            1.83616        0.007
+          10  that : 190   approaches : 0       1.86855        0.007
