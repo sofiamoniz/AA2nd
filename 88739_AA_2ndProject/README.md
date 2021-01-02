@@ -14,8 +14,8 @@
 
 ### Note:
 
--**The code is located in the folder "code"**
+-**The code is located on folder "code"**
 
--**The pdf report can be found in the folder "report"**
+-**The pdf report can be found on folder "report"**
 
 -**The tables presented in the report can be found on folder "report/tables" - see this in case the tables are not perceptible in the report**
