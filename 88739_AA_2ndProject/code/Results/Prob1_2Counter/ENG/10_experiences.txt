@@ -1,0 +1,26 @@
+  Repetition  Max value    Min value         Mean value    Exec.time
+------------  -----------  --------------  ------------  -----------
+           1  that : 176   platform : 0         1.85597        0.007
+           2  that : 169   unfold : 0           1.8673         0.007
+           3  that : 193   paces : 0            1.84528        0.007
+           4  that : 171   approaches : 0       1.84151        0.007
+           5  that : 179   carefully : 0        1.82736        0.008
+           6  that : 167   approaches : 0       1.83428        0.007
+           7  that : 177   approaches : 0       1.83239        0.008
+           8  that : 163   paces : 0            1.87484        0.007
+           9  that : 182   paces : 0            1.86761        0.007
+          10  that : 191   approaches : 0       1.81635        0.007
+
+
+  Repetition    Max rel error    Min rel error    Mean rel error
+------------  ---------------  ---------------  ----------------
+           1              100                0            50.498
+           2              100                0            49.178
+           3              100                0            49.915
+           4              100                0            51.337
+           5              100                0            51.507
+           6              100                0            50.123
+           7              100                0            50.405
+           8              100                0            48.757
+           9              100                0            49.578
+          10              100                0            50.771

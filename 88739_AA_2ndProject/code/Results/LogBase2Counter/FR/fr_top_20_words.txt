@@ -1,0 +1,21 @@
+--- Top 20 words - counter with log base 2:  
+avec -> 10
+dans -> 10
+votre -> 9
+vous -> 9
+pour -> 9
+plus -> 9
+comme -> 9
+nous -> 8
+sont -> 8
+notre -> 8
+même -> 8
+fait -> 8
+cela -> 8
+tous -> 8
+leur -> 8
+toute -> 8
+mais -> 8
+donc -> 8
+cette -> 7
+encore -> 7

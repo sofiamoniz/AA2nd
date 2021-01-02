@@ -1,0 +1,21 @@
+--- Top 20 words - counter with log base 2:  
+will -> 9
+with -> 9
+shall -> 9
+your -> 8
+this -> 8
+have -> 8
+give -> 8
+that -> 8
+what -> 8
+from -> 8
+where -> 8
+would -> 8
+time -> 8
+more -> 8
+know -> 8
+enter -> 7
+come -> 7
+most -> 7
+good -> 7
+them -> 7
