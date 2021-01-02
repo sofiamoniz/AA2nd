@@ -7,10 +7,10 @@
 ### To run the program (inside folder "code"):
 
     There are four possible scripts:
-	1. python3 RepeatingExperience.py
-	2. python3 ExampleENG.py
-	3. python3 ExampleFR.py
-	4. python3 ExamplePT.py
+		1. python3 RepeatingExperience.py
+		2. python3 ExampleENG.py
+		3. python3 ExampleFR.py
+		4. python3 ExamplePT.py
 
 ### Note:
 
