@@ -27,7 +27,7 @@ def main(file_to_read, num_repetitions):
     ###################
     repeat_log_2(file_to_read,num_repetitions)
 
-    print("\n    Repeating experience " + str(num_repetitions) + " times with Hamlet in english\n"
+    print("\n    Repeating experience " + str(num_repetitions) + " times with Hamlet, in english\n"
                 +"\n--- Probabilistic counter with probability 1/2 results can be found on folder Results/Prob1_2Counter/ENG in file 10_experiences.txt"   
                 +"\n--- Probabilistic counter with log base 2 results can be found on folder Results/LogBase2Counter/ENG in file 10_experiences.txt")
 
@@ -48,7 +48,7 @@ def repeat_prob_1_2(file_to_read, num_repetitions):
     count = 0
     headers = ["Repetition", "Max value", "Min value","Mean value", "Exec.time"]
     rows = []
-    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error"]
+    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error", "Standard deviation"]
     rows2=[]
     for i in range(num_repetitions):
         counter_prob_1_2 = Counter_prob_1_2(file_to_read)
@@ -61,7 +61,7 @@ def repeat_prob_1_2(file_to_read, num_repetitions):
         errors.calculate_errors()
         count+=1       
         rows.append([count,counter_prob_1_2.get_max(),counter_prob_1_2.get_min(),counter_prob_1_2.get_mean(), counter_prob_1_2.get_execution_time()])
-        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error()])
+        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error(), errors.get_std_deviation()])
     with open("Results/Prob1_2Counter/ENG/10_experiences.txt","w") as output:
         output.write(tabulate(rows,headers=headers))
         output.write("\n\n\n")
@@ -72,7 +72,7 @@ def repeat_log_2(file_to_read, num_repetitions):
     count = 0
     headers = ["Repetition", "Max value", "Min value","Mean value", "Exec.time"]
     rows = []
-    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error"]
+    headers2 = ["Repetition","Max rel error", "Min rel error", "Mean rel error", "Standard deviation"]
     rows2=[]
     for i in range(num_repetitions):
         counter_log_base_2 = Counter_log_base_2(file_to_read)
@@ -85,7 +85,7 @@ def repeat_log_2(file_to_read, num_repetitions):
         errors.calculate_errors()
         count+=1
         rows.append([count,counter_log_base_2.get_max(),counter_log_base_2.get_min(),counter_log_base_2.get_mean(), counter_log_base_2.get_execution_time()])
-        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error()])
+        rows2.append([count,errors.get_max_rel_error(), errors.get_min_rel_error(), errors.get_mean_rel_error(), errors.get_std_deviation()])
     
     with open("Results/LogBase2Counter/ENG/10_experiences.txt","w") as output:
         output.write(tabulate(rows,headers=headers))
