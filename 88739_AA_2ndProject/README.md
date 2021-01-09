@@ -4,6 +4,10 @@
 
 **The developed code allows to count the words present in text files by using three different counters - exact counter, fixed probability 1/2 counter and log base 2 counter**
 
+### Requirements:
+	
+    pip3 install tabulate
+
 ### To run the program (inside folder "code"):
 
     There are four possible scripts:
