@@ -9,7 +9,7 @@ import random
 from ReaderAndErrors.File_reader import File_reader
 from collections import Counter 
 
-##Class that acts as a probabilistic counter with probability 1/2
+##Class that acts as a probabilistic counter with fixed probability 1/2
 
 class Counter_prob_1_2:
 
